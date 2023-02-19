@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap");
+@font-face {
+  font-family: Iran;
+  src: url(../assets/Iranintl-Medium.otf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Space Grotesk", sans-serif;
+  border: none;
+  list-style: none;
+  outline: none;
+  text-decoration: none;
+  font-family: Iran;
+}
+:root {
+  --mainColor: rgb(25, 119, 204);
+  --whiteColor: white;
+  --textColor: #535353;
+  --padding: 6%;
+  --hoverColor: rgb(0, 68, 131);
+  --boxshadow: rgb(216, 216, 216);
+  --countsColor: rgb(8, 39, 68);
+  --boxborderColor: rgb(205, 232, 255);
+  --bgofCounts-offer: rgb(204, 230, 255);
+}
+html {
+  font-size: 15px;
+  scroll-behavior: smooth;
+}
+body {
+  height: 100vh;
+  width: 100%;
+}
+.container {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+.container h2 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  color: var(--mainColor);
+}
+.container .icons {
+  max-width: 40rem;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.icons .content {
+  display: grid;
+  place-items: center;
+}
+.icons .content i {
+  font-size: 2rem;
+  color: var(--countsColor);
+  position: relative;
+}
+.icons .content i.line {
+  z-index: 1;
+  width: 4rem;
+  height: 0.1rem;
+  background-color: var(--whiteColor);
+  transform: translateY(1rem) rotate(38deg);
+}
+.icons .content p {
+  padding-top: 1rem;
+  font-size: 1rem;
+  color: var(--mainColor);
+}
+/* the cards of the subscribe */
+.subscribe-cards {
+  padding-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.subscribe-cards .card {
+  width: 100%;
+  max-width: 15rem;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(
+    to bottom,
+    rgb(46, 89, 129),
+    rgb(39, 100, 158),
+    rgb(18, 94, 165)
+  );
+  border-radius: 1rem;
+  color: var(--whiteColor);
+  padding: 1.5rem 0.5rem;
+  position: relative;
+}
+.subscribe-cards .card h3,
+p,
+span {
+  font-size: 0.8rem;
+}
+.subscribe-cards .card span {
+  font-size: 0.5rem;
+}
+.subscribe-cards .card .circle {
+  margin: 1rem 0;
+  padding: 1rem 0.5rem;
+  display: grid;
+  place-items: center;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: var(--whiteColor);
+  color: var(--countsColor);
+  box-shadow: 0.1rem 0.1rem 0.5rem var(--countsColor),
+    -0.1rem -0.1rem 0.5rem var(--countsColor), inset 0.1rem 0.1rem 0.1rem #eee,
+    inset 0.1rem 0.1rem 0.1rem rgb(184, 184, 184);
+}
+.subscribe-cards .card .circle p {
+  font-size: 1rem;
+}
+.subscribe-cards .card .content {
+  width: 100%;
+  padding: 0 0.5rem;
+}
+.subscribe-cards .card .content p {
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+.subscribe-cards .card button {
+  margin-top: 2rem;
+  padding: 0.4rem 2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  position: absolute;
+  bottom: -1.05rem;
+  color: var(--countsColor);
+  font-size: 0.9rem;
+}
+.subscribe-cards .card h4 {
+  position: absolute;
+  top: -0.99rem;
+  background-color: var(--whiteColor);
+  color: var(--countsColor);
+  border-radius: 2rem;
+  font-size: 0.8rem;
+  padding: 0.4rem 1rem;
+}
+.subscribe-cards .card:nth-child(2) {
+  height: 24rem;
+}
+/* the responsive state now is coming */
+@media screen and (max-width: 575px) {
+  html {
+    font-size: 18px;
+  }
+  .container h2 {
+    font-size: 1.2rem;
+  }
+  .container .icons {
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .container .icons .content {
+    width: 46%;
+  }
+  .icons .content p {
+    font-size: 90%;
+  }
+  .subscribe-cards {
+    padding: 3rem 2rem;
+    flex-wrap: wrap;
+    row-gap: 5rem;
+  }
+  .subscribe-cards .card .content p {
+    font-size: 80%;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  html {
+    font-size: 25px;
+  }
+  .container h2 {
+    font-size: 1.2rem;
+  }
+  .container .icons {
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .container .icons .content {
+    width: 46%;
+  }
+  .icons .content p {
+    font-size: 90%;
+  }
+  .subscribe-cards {
+    padding: 3rem 2rem;
+    flex-wrap: wrap;
+    row-gap: 5rem;
+  }
+  .subscribe-cards .card .content p {
+    font-size: 80%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  html {
+    font-size: 25px;
+  }
+  .container h2 {
+    font-size: 1.2rem;
+  }
+  .container .icons {
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .container .icons .content {
+    width: 46%;
+  }
+  .icons .content p {
+    font-size: 90%;
+  }
+  .subscribe-cards {
+    padding: 3rem 2rem;
+    flex-wrap: wrap;
+    row-gap: 5rem;
+  }
+  .subscribe-cards .card .content p {
+    font-size: 80%;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1279px) {
+  html {
+    font-size: 20px;
+  }
+  .container h2 {
+    font-size: 1.2rem;
+  }
+  .container .icons {
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .container .icons .content {
+    width: 46%;
+  }
+  .icons .content p {
+    font-size: 90%;
+  }
+  .subscribe-cards {
+    padding: 3rem 2rem;
+    flex-wrap: wrap;
+    row-gap: 5rem;
+  }
+  .subscribe-cards .card .content p {
+    font-size: 80%;
+  }
+}
+/* @media screen and (min-width: 1280px) and (max-width: 1920px) {
+  html {
+    font-size: 27px;
+  }
+  .container h2 {
+    font-size: 1.5rem;
+  }
+  .container .icons {
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  .container .icons p {
+    font-size: 120%;
+  }
+  .container .icons .content {
+    width: 46%;
+  }
+  .icons .content p {
+    font-size: 110%;
+  }
+  .subscribe-cards {
+    padding: 3rem 2rem;
+    flex-wrap: wrap;
+    row-gap: 5rem;
+  }
+  .subscribe-cards .card .content p {
+    font-size: 90%;
+  }
+} */
